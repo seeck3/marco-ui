@@ -26,6 +26,9 @@
     "paths": {
       "@src/*": ["src/*"]
     },
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist",
     "types": [
       "jest",
       "@testing-library/jest-dom"
