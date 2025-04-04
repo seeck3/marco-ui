@@ -17,7 +17,20 @@
       [
         "@semantic-release/github",
         {
-          "assets": ["dist/**/*", "storybook-static/**/*"]
+          "assets": [
+            {
+              "path": "dist/marco-ui.umd.js",
+              "label": "UMD Bundle v${nextRelease.version}"
+            },
+            {
+              "path": "dist/marco-ui.es.js",
+              "label": "ES Module Bundle v${nextRelease.version}"
+            },
+            {
+              "path": "storybook-static/**/*",
+              "label": "Storybook v${nextRelease.version}"
+            }
+          ]
         }
       ]
     ]
