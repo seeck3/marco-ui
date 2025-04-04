@@ -8,7 +8,7 @@
   "scripts": {
     "build": "vite build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "storybook build",
     "test": "jest",
     "lint": "eslint src/**/*.{ts,tsx}",
     "format": "prettier --write 'src/**/*.{ts,tsx,css,md}'"
