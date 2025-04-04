@@ -1,4 +1,4 @@
-name: CI
+name: CI and Release
 
 on:
   push:
@@ -7,9 +7,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build-test:
+  build-test-release:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -18,8 +17,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmjs.org/'
 
-      - name: Clean and install dependencies
+      # Clean install dependencies
+      - name: Clean and Install Dependencies
         run: |
           rm -rf node_modules package-lock.json
           npm install
@@ -35,3 +36,11 @@ jobs:
 
       - name: Build Storybook
         run: npm run build-storybook
+
+      # Run semantic-release (only on main branch, not on PRs)
+      - name: Run semantic-release
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
