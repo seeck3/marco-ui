@@ -1,0 +1,6 @@
+import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{A as s}from"./Tooltip-CHt7Rsq-.js";import"./index-D4lIrffr.js";const c={title:"Components/Alert",component:s},r=a=>e.jsxs("div",{className:"space-y-4 flex flex-col border-2 border-dashed border-gray-300 p-6 rounded-md w-full",children:[e.jsx(s,{...a,type:"info",message:"This is an info alert"}),e.jsx(s,{...a,type:"success",message:"This is a success alert"}),e.jsx(s,{...a,type:"warning",message:"This is a warning alert"}),e.jsx(s,{...a,type:"error",message:"This is an error alert"})]});r.__docgenInfo={description:"",methods:[],displayName:"AllAlerts"};var t,o,l;r.parameters={...r.parameters,docs:{...(t=r.parameters)==null?void 0:t.docs,source:{originalSource:`args => <div className="space-y-4 flex flex-col border-2 border-dashed border-gray-300 p-6 rounded-md w-full">
+    <Alert {...args} type="info" message="This is an info alert" />
+    <Alert {...args} type="success" message="This is a success alert" />
+    <Alert {...args} type="warning" message="This is a warning alert" />
+    <Alert {...args} type="error" message="This is an error alert" />
+  </div>`,...(l=(o=r.parameters)==null?void 0:o.docs)==null?void 0:l.source}}};const m=["AllAlerts"];export{r as AllAlerts,m as __namedExportsOrder,c as default};
