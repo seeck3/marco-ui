@@ -1,7 +1,6 @@
 {
   "name": "marco-ui",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/marco-ui.umd.js",
   "module": "dist/marco-ui.es.js",
   "types": "dist/index.d.ts",
