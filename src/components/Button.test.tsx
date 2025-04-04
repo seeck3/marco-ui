@@ -1,7 +1,6 @@
 // src/components/Button.test.tsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Button from './Button';
+import { Button } from '@src/index';
 
 test('renders button with label', () => {
   render(<Button label="Test Button" />);

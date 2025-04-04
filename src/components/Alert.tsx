@@ -1,5 +1,6 @@
 // src/components/Alert.tsx
 import React from 'react';
+import { TextMarco } from '@src/components';
 
 export type AlertType = 'info' | 'success' | 'warning' | 'error';
 
@@ -15,17 +16,10 @@ const typeClasses: Record<AlertType, string> = {
   error: 'bg-red-100 border-red-500 text-red-700',
 };
 
-const Alert: React.FC<AlertProps> = ({
-  type = 'info',
-  message,
-  ...props
-}) => {
+const Alert: React.FC<AlertProps> = ({ type = 'info', message, ...props }) => {
   return (
-    <div
-      className={`border-l-4 p-4 ${typeClasses[type]} rounded`}
-      {...props}
-    >
-      <p>{message}</p>
+    <div className={`border-l-4 p-4 ${typeClasses[type]} rounded`} {...props}>
+      <TextMarco>{message}</TextMarco>
     </div>
   );
 };

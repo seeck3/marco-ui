@@ -1,7 +1,6 @@
 // src/stories/Button.stories.tsx
-import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import Button, { ButtonProps } from '../components/Button';
+import { TextMarco, Button } from '@src/index';
 
 export default {
   title: 'Components/Button',
@@ -15,28 +14,14 @@ export default {
   },
 } as Meta<typeof Button>;
 
-const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  label: 'Primary Button',
-  variant: 'primary',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Secondary Button',
-  variant: 'secondary',
-};
-
-export const Warning = Template.bind({});
-Warning.args = {
-  label: 'Warning Button',
-  variant: 'warning',
-};
-
-export const Error = Template.bind({});
-Error.args = {
-  label: 'Error Button',
-  variant: 'error',
-};
+export const AllButtons: StoryFn<typeof Button> = (args) => (
+  <div className="space-y-4 flex flex-col items-center border-2 border-dashed border-gray-300 p-6 rounded-md w-full">
+    <TextMarco variant="h3" className="mb-4">
+      Button Variations
+    </TextMarco>
+    <Button {...args} label="Primary Button" variant="primary" />
+    <Button {...args} label="Secondary Button" variant="secondary" />
+    <Button {...args} label="Warning Button" variant="warning" />
+    <Button {...args} label="Error Button" variant="error" />
+  </div>
+);

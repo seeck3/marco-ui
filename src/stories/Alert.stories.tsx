@@ -1,35 +1,17 @@
 // src/stories/Alert.stories.tsx
-import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import Alert, { AlertProps } from '../components/Alert';
+import { Alert } from '@src/index'; // Adjust the import path as necessary
 
 export default {
   title: 'Components/Alert',
   component: Alert,
 } as Meta<typeof Alert>;
 
-const Template: StoryFn<typeof Alert> = (args) => <Alert {...args} />;
-
-export const InfoAlert = Template.bind({});
-InfoAlert.args = {
-  type: 'info',
-  message: 'This is an info alert',
-};
-
-export const SuccessAlert = Template.bind({});
-SuccessAlert.args = {
-  type: 'success',
-  message: 'Operation successful!',
-};
-
-export const WarningAlert = Template.bind({});
-WarningAlert.args = {
-  type: 'warning',
-  message: 'Warning: check your settings',
-};
-
-export const ErrorAlert = Template.bind({});
-ErrorAlert.args = {
-  type: 'error',
-  message: 'Error: something went wrong',
-};
+export const AllAlerts: StoryFn<typeof Alert> = (args) => (
+  <div className="space-y-4 flex flex-col border-2 border-dashed border-gray-300 p-6 rounded-md w-full">
+    <Alert {...args} type="info" message="This is an info alert" />
+    <Alert {...args} type="success" message="This is a success alert" />
+    <Alert {...args} type="warning" message="This is a warning alert" />
+    <Alert {...args} type="error" message="This is an error alert" />
+  </div>
+);

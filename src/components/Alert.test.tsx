@@ -1,7 +1,6 @@
 // src/components/Alert.test.tsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Alert, { AlertProps } from './Alert';
+import Alert from './Alert'; // Adjust the import path based on your file structure';
 
 describe('Alert component', () => {
   const defaultMessage = 'Test Alert Message';
