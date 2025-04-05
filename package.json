@@ -4,6 +4,11 @@
   "main": "dist/marco-ui.umd.js",
   "module": "dist/marco-ui.es.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "build": "vite build",
     "storybook": "storybook dev -p 6006",
