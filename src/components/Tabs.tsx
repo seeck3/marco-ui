@@ -1,3 +1,4 @@
+'use client'
 // src/components/Tabs.tsx
 import React, { useState, ReactNode } from 'react';
 

@@ -11,7 +11,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/marco-ui.es.js",
+      "require": "./dist/marco-ui.umd.js",
       "types": "./dist/index.d.ts"
     },
     "./components": {

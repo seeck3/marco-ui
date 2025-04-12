@@ -1,3 +1,4 @@
+'use client'
 // src/components/Toast.tsx
 import React, { useEffect } from 'react';
 import {

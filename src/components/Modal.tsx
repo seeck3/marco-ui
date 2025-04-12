@@ -1,3 +1,4 @@
+'use client'
 // src/components/Modal.tsx
 import React from 'react';
 import { Button, IconButton, TextMarco } from '@src/index';

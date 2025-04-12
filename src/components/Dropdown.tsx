@@ -1,3 +1,4 @@
+'use client'
 // src/components/Dropdown.tsx
 import React, { useState, useRef, useEffect } from 'react';
 
